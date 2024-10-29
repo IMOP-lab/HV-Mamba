@@ -1,1 +1,1 @@
-# HV-Mamba
+# HV-Mamba: Harmonic Vision Mamba
