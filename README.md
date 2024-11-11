@@ -29,13 +29,13 @@ Table1: Summary of the breast tumor datasets utilized in this experimental proto
 | I-SPY 1  | 6,801   | 6,120   |  -  | 681 |
 | BCMedSet | 9,928 | 8,935| - | 993|
 
-### Baselines
+### Results
 
 We provide GitHub links pointing to the PyTorch implementation code for all networks compared in this experiment here, so you can easily reproduce all these projects.
 
 [U-Net](https://github.com/milesial/Pytorch-UNet); [R2U-Net](https://github.com/ncpaddle/R2UNet-paddle); [PAttUNet](https://github.com/faresbougourzi/PDAtt-Unet); [DAttUNet](https://github.com/faresbougourzi/PDAtt-Unet); [CENet](https://github.com/Guzaiwang/CE-Net); [DANet](https://github.com/junfu1115/DANet), [OCNet](https://github.com/openseg-group/OCNet.pytorch); [CGNet](https://github.com/wutianyiRosun/CGNet); [ENet](https://github.com/davidtvs/PyTorch-ENet), [LEDNet](https://github.com/sczhou/LEDNet), [SegNet](https://github.com/vinceecws/SegNet_PyTorch?tab=readme-ov-file); [DconnNet](https://github.com/Zyun-Y/DconnNet); [DeepLab](https://github.com/kazuto1011/deeplab-pytorch?tab=readme-ov-file); [ICNet](https://github.com/hszhao/ICNet)
 
-Table2: Comparison of Segmentation Performance Across Breast Cancer Medical Imaging Models on the DCE-MRI BreastDM Dataset
+Table 2: Comparison of Segmentation Performance Across Breast Cancer Medical Imaging Models on the DCE-MRI BreastDM Dataset
 
 | Model          | 95HD↓            | DSC (%)↑           | G-mean (%)↑       | Kappa (%)↑         | MCC (%)↑           |
 |----------------|------------------|--------------------|-------------------|--------------------|--------------------|
@@ -57,7 +57,7 @@ Table2: Comparison of Segmentation Performance Across Breast Cancer Medical Imag
 | **HV-Mamba**   | **1.76 ± 0.80**  | **77.56 ± 26.77**  | **86.29 ± 26.15** | **77.52 ± 26.81**  | **78.34 ± 26.36**  |
 
 
-Table3: Comparison of Segmentation Performance Across Breast Cancer Medical Imaging Models on the DCE-MRI I-SPY 1 Dataset
+Table 3: Comparison of Segmentation Performance Across Breast Cancer Medical Imaging Models on the DCE-MRI I-SPY 1 Dataset
 
 | Model            | 95HD↓            | DSC (%)↑           | G-mean (%)↑       | Kappa (%)↑         | MCC (%)↑           |
 |------------------|------------------|--------------------|-------------------|--------------------|--------------------|
@@ -78,7 +78,7 @@ Table3: Comparison of Segmentation Performance Across Breast Cancer Medical Imag
 | ICNet            | 2.78 ± 1.04      | 77.77 ± 21.66      | 86.14 ± 18.61     | 77.53 ± 21.61      | 78.33 ± 20.73      |
 | **HV-Mamba**     | **2.44 ± 0.94**  | **83.11 ± 20.99**  | 89.58 ± 18.75     | **83.06 ± 20.73**  | **83.67 ± 19.83**  |
 
-Table4: Comparison of Segmentation Performance Across Breast Cancer Medical Imaging Models on the DCE-MRI BCMedSet Dataset
+Table 4: Comparison of Segmentation Performance Across Breast Cancer Medical Imaging Models on the DCE-MRI BCMedSet Dataset
 | Model          | 95HD↓           | DSC (%)↑           | G-mean (%)↑       | Kappa (%)↑         | MCC (%)↑          |
 |----------------|------------------|---------------------|--------------------|---------------------|--------------------|
 | U-Net          | 2.31 ± 1.17      | 71.00 ± 27.90      | 83.53 ± 26.67     | 73.10 ± 25.22      | 72.23 ± 27.10      |
@@ -108,3 +108,42 @@ Table4: Comparison of Segmentation Performance Across Breast Cancer Medical Imag
 </p>
 
 ### Ablation study
+
+#### Effect of Removing Module
+
+Table 5: This table presents an ablation analysis of the HV-Mamba model's key modules on the BreastDM dataset. The presence of a module is indicated by a checkmark (✔), while an unmarked cell denotes its absence. Performance metrics include 95HD, DSC, G-Mean, Kappa, MCC, and IOU.
+
+| HSS           | HCF           | seSK          | SpaC          | 95HD↓           | DSC (%)↑       | G-Mean (%)↑      | Kappa (%)↑     | MCC (%)↑       | IOU (%)↑       |
+|---------------|---------------|---------------|---------------|-----------------|----------------|------------------|----------------|----------------|----------------|
+|               | ✔             | ✔             | ✔             | 1.81            | 75.23          | 80.71            | 75.19          | 76.09          | 67.21          |
+| ✔             |               | ✔             | ✔             | 1.80            | 75.98          | 83.48            | 75.93          | 76.72          | 68.40          |
+| ✔             | ✔             |               | ✔             | 1.79            | 77.06          | 85.52            | 77.01          | 77.84          | 68.55          |
+| ✔             | ✔             | ✔             |               | 1.81            | 74.28          | 85.19            | 74.22          | 75.42          | 64.63          |
+|               |               |               | ✔             | 1.81            | 74.44          | 81.91            | 74.40          | 75.28          | 66.55          |
+| ✔             | ✔             | ✔             | ✔             | **1.76**        | **77.56**      | **86.29**        | **77.52**      | **78.34**      | **69.18**      |
+
+
+#### Integration of seSK Unit Across Multiple Architectures
+
+Table 6: This table assesses the integration efficacy of the seSK unit within different network architectures for breast cancer DCE-MRI segmentation. Metrics include 95HD, DSC, G-Mean, Kappa, and MCC, with improvements highlighted in blue to indicate enhanced segmentation precision.
+
+| Architecture           | 95HD↓                  | DSC (%)↑               | G-Mean (%)↑            | Kappa (%)↑            | MCC (%)↑              |
+|------------------------|------------------------|------------------------|------------------------|-----------------------|-----------------------|
+| U-Net                  | 1.81 ± 0.81           | 74.65 ± 29.14          | 82.70 ± 29.06          | 74.60 ± 29.17         | 75.59 ± 28.62         |
+| + seSK unit            | **1.75 ± 0.79** (↓0.06) | **77.93 ± 27.29** (↑3.28) | **86.55 ± 27.15** (↑3.85) | **77.88 ± 27.34** (↑3.28) | **78.68 ± 26.88** (↑3.09) |
+| R2U-Net                | 1.81 ± 0.82           | 76.18 ± 27.84          | 82.70 ± 26.17          | 76.13 ± 27.88         | 77.12 ± 27.27         |
+| + seSK unit            | **1.75 ± 0.82** (↓0.06) | **78.24 ± 25.23** (↑2.06) | **85.73 ± 23.68** (↑3.03) | **78.19 ± 25.28** (↑2.06) | **79.05 ± 24.70** (↑1.93) |
+| PAttUNet               | 1.88 ± 0.84           | 72.15 ± 31.01          | 80.76 ± 30.32          | 72.09 ± 31.05         | 73.01 ± 30.54         |
+| + seSK unit            | **1.80 ± 0.88** (↓0.08) | **76.90 ± 27.07** (↑4.75) | **84.76 ± 25.73** (↑4.00) | **76.85 ± 27.11** (↑4.76) | **77.87 ± 26.38** (↑4.86) |
+| DAttUNet               | 1.82 ± 0.81           | 74.62 ± 28.11          | **84.77 ± 28.38**      | 74.57 ± 28.13         | 75.78 ± 27.47         |
+| + seSK unit            | **1.72 ± 0.69** (↓0.10) | **76.76 ± 24.83** (↑2.14) | 83.99 ± 24.77 (↓0.78) | **76.71 ± 24.88** (↑2.14) | **78.26 ± 23.50** (↑2.48) |
+| ENet                   | 2.00 ± 0.70           | 68.77 ± 27.58          | 77.91 ± 27.59          | 68.72 ± 27.59         | 70.05 ± 26.86         |
+| + seSK unit            | **1.97 ± 0.66** (↓0.03) | **70.12 ± 25.86** (↑1.35) | **79.37 ± 25.72** (↑1.46) | **70.07 ± 25.88** (↑1.35) | **71.33 ± 25.19** (↑1.28) |
+| SegNet                 | 1.87 ± 0.83           | 74.67 ± 27.52          | 82.10 ± 24.48          | 74.62 ± 27.58         | 75.55 ± 27.10         |
+| + seSK unit            | **1.82 ± 0.80** (↓0.05) | **77.16 ± 25.48** (↑2.49) | **85.39 ± 23.99** (↑3.27) | **77.11 ± 25.53** (↑2.49) | **77.97 ± 24.97** (↑2.42) |
+
+
+## Question
+
+If you have any qusetion, please contact 'gaopeng.huang@hdu.edu.cn'
+
