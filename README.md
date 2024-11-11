@@ -116,7 +116,7 @@ Table 4: Comparison of Segmentation Performance Across Breast Cancer Medical Ima
   Figure 3: Comparative representation of breast tumor delineation on DCE-MRI sequences and associated 3D reconstructions utilizing the HV-Mamba framework.
 </p>
 
-Based on the proposed method, 3D reconstructions of the patient’s thoracic outline and tumor were generated, as illustrated in Fig. \ref{3dreco}. The images show the segmentation of breast tumors in DCE-MRI and the corresponding 3D reconstructions derived from HV-Mamba results. Subplots (b) and (d) represent the 3D reconstruction models corresponding to 2D MRI slices (a) and (c), respectively, each comprising 80 and 88 sequence images. In each slice, the tumor region is annotated in red.
+Based on the proposed method, 3D reconstructions of the patient’s thoracic outline and tumor were generated, as illustrated in Figure 3. The images show the segmentation of breast tumors in DCE-MRI and the corresponding 3D reconstructions derived from HV-Mamba results. Subplots (b) and (d) represent the 3D reconstruction models corresponding to 2D MRI slices (a) and (c), respectively, each comprising 80 and 88 sequence images. In each slice, the tumor region is annotated in red.
 
 ### Ablation study
 
