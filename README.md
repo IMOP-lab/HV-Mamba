@@ -1,6 +1,6 @@
 # HV-Mamba: Harmonic Vision Mamba
 
-### [Project page](https://github.com/IMOP-lab/HV-Mamba) 
+### [Project page](https://github.com/IMOP-lab/HV-Mamba) | [Our laboratory home page](https://github.com/IMOP-lab) 
 
 by Xingru Huang, Han Yang, Gaopeng Huang, Zhao Huang, Hui Guo, Lou Zhao, Huiyu Zhou, Guan Gui, Yun Lin, Minhong Sun, Jin Liu, Zhiwen Zheng, Xiaoshuai Zhang
 
@@ -19,4 +19,19 @@ The structural overview of the HV-Mamba framework. The left section, designated 
 The experimental environment consisted of two workstations, each equipped with dual NVIDIA RTX 3080 GPUs and 128GB RAM. Experiments were conducted using Python 3.9, PyTorch 2.0.0, and CUDA 11.8. An initial learning rate of 0.0001 was applied across all models to ensure consistency in training dynamics.
 
 ## Experiment
+### Dataset
+
+
+
 ### Baselines
+
+We provide GitHub links pointing to the PyTorch implementation code for all networks compared in this experiment here, so you can easily reproduce all these projects.
+
+[U-Net](https://github.com/milesial/Pytorch-UNet); [R2U-Net](https://github.com/ncpaddle/R2UNet-paddle); [PAttUNet](https://github.com/faresbougourzi/PDAtt-Unet); [DAttUNet](https://github.com/faresbougourzi/PDAtt-Unet); [CENet](https://github.com/Guzaiwang/CE-Net); [DANet](https://github.com/junfu1115/DANet), [OCNet](https://github.com/openseg-group/OCNet.pytorch); [CGNet](https://github.com/wutianyiRosun/CGNet); [ENet](https://github.com/davidtvs/PyTorch-ENet), [LEDNet](https://github.com/sczhou/LEDNet), [SegNet](https://github.com/vinceecws/SegNet_PyTorch?tab=readme-ov-file); [DconnNet](https://github.com/Zyun-Y/DconnNet); [DeepLab](https://github.com/kazuto1011/deeplab-pytorch?tab=readme-ov-file); [ICNet](https://github.com/hszhao/ICNet)
+
+<div align=left>
+  <img src="https://github.com/IMOP-lab/HV-Mamba/blob/main/figures/comparison of models.png"width=80% height=80%>
+</div>
+<p align=left>
+  Figure 2: The visual results of our method compared to the existing 15 segmentation methods on the BreastDM dataset.
+</p>
