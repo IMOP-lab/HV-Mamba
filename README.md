@@ -20,7 +20,9 @@ The experimental environment consisted of two workstations, each equipped with d
 
 ## Experiment
 ### Dataset
-
+<p align=left>
+  Table 1: Summary of the breast tumor datasets utilized in this experimental protocol, encompassing total instance counts alongside distributions within the training, validation, and testing cohorts.
+</p>
 | Datasets | Quantity | Training Set | Validation Set | Testing Set |
 |---------|---------|---------|---------|---------|
 | BresdtDM | 29,510   | 20,432 | 1,989 |7,089
