@@ -21,7 +21,11 @@ The experimental environment consisted of two workstations, each equipped with d
 ## Experiment
 ### Dataset
 
-
+| Datasets | Quantity | Training Set | Validation Set | Testing Set |
+|---------|---------|---------|---------|---------|
+| BresdtDM | 29,510   | 20,432 | 1,989 |7,089
+| I-SPY 1  | 6,801   | 6,120   |  -  | 681 |
+| BCMedSet | 9,928 | 8,935| - | 993|
 
 ### Baselines
 
@@ -29,9 +33,12 @@ We provide GitHub links pointing to the PyTorch implementation code for all netw
 
 [U-Net](https://github.com/milesial/Pytorch-UNet); [R2U-Net](https://github.com/ncpaddle/R2UNet-paddle); [PAttUNet](https://github.com/faresbougourzi/PDAtt-Unet); [DAttUNet](https://github.com/faresbougourzi/PDAtt-Unet); [CENet](https://github.com/Guzaiwang/CE-Net); [DANet](https://github.com/junfu1115/DANet), [OCNet](https://github.com/openseg-group/OCNet.pytorch); [CGNet](https://github.com/wutianyiRosun/CGNet); [ENet](https://github.com/davidtvs/PyTorch-ENet), [LEDNet](https://github.com/sczhou/LEDNet), [SegNet](https://github.com/vinceecws/SegNet_PyTorch?tab=readme-ov-file); [DconnNet](https://github.com/Zyun-Y/DconnNet); [DeepLab](https://github.com/kazuto1011/deeplab-pytorch?tab=readme-ov-file); [ICNet](https://github.com/hszhao/ICNet)
 
+
+
 <div align=left>
-  <img src="https://github.com/IMOP-lab/HV-Mamba/blob/main/figures/comparison of models.png"width=80% height=80%>
+  <img src="https://github.com/IMOP-lab/HV-Mamba/blob/main/figures/comparison of models.png"width=50% height=50%>
 </div>
 <p align=left>
-  Figure 2: The visual results of our method compared to the existing 15 segmentation methods on the BreastDM dataset.
+  Figure 2: A comparative analysis of segmentation outputs from HV-Mamba and fifteen contemporary breast cancer segmentation architectures reveals the segmentation efficacy of each model on the BreastDM dataset.
 </p>
+
