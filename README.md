@@ -162,4 +162,4 @@ Table 6: This table assesses the integration efficacy of the seSK unit within di
 
 ## Question
 
-If you have any qusetion, please contact '[gaopeng.huang@hdu.edu.cn](mailto:gaopeng.huang@hdu.edu.cn)' and '[guohui71@sxmu.edu.cn](mailto:guohui71@sxmu.edu.cn).
+If you have any qusetion, please contact '[gaopeng.huang@hdu.edu.cn](mailto:gaopeng.huang@hdu.edu.cn)' and '[guohui71@sxmu.edu.cn](mailto:guohui71@sxmu.edu.cn)'.
