@@ -29,11 +29,13 @@ Table1: Summary of the breast tumor datasets utilized in this experimental proto
 | I-SPY 1  | 6,801   | 6,120   |  -  | 681 |
 | BCMedSet | 9,928 | 8,935| - | 993|
 
-### Results
+### Baseline
 
 We provide GitHub links pointing to the PyTorch implementation code for all networks compared in this experiment here, so you can easily reproduce all these projects.
 
 [U-Net](https://github.com/milesial/Pytorch-UNet); [R2U-Net](https://github.com/ncpaddle/R2UNet-paddle); [PAttUNet](https://github.com/faresbougourzi/PDAtt-Unet); [DAttUNet](https://github.com/faresbougourzi/PDAtt-Unet); [CENet](https://github.com/Guzaiwang/CE-Net); [DANet](https://github.com/junfu1115/DANet), [OCNet](https://github.com/openseg-group/OCNet.pytorch); [CGNet](https://github.com/wutianyiRosun/CGNet); [ENet](https://github.com/davidtvs/PyTorch-ENet), [LEDNet](https://github.com/sczhou/LEDNet), [SegNet](https://github.com/vinceecws/SegNet_PyTorch?tab=readme-ov-file); [DconnNet](https://github.com/Zyun-Y/DconnNet); [DeepLab](https://github.com/kazuto1011/deeplab-pytorch?tab=readme-ov-file); [ICNet](https://github.com/hszhao/ICNet)
+
+### Results
 
 Table 2: Comparison of Segmentation Performance Across Breast Cancer Medical Imaging Models on the DCE-MRI BreastDM Dataset
 
@@ -111,8 +113,10 @@ Table 4: Comparison of Segmentation Performance Across Breast Cancer Medical Ima
   <img src="https://github.com/IMOP-lab/HV-Mamba/blob/main/figures/3dreco.png">
 </div>
 <p align=left>
-  Figure 3: Comparative representation of breast tumor delineation on DCE-MRI sequences and associated 3D reconstructions utilizing the HV-Mamba framework. Subfigures (a) and (c) display selected axial MRI slices with delineated tumor boundaries, marked in red. Corresponding 3D reconstructions in subfigures (b) and (d) integrate segmented tumor regions, visualizing spatial morphology and positioning within the thoracic outline, derived from 80 and 88 sequential images, respectively. The resultant models provide an enhanced anatomical perspective.
+  Figure 3: Comparative representation of breast tumor delineation on DCE-MRI sequences and associated 3D reconstructions utilizing the HV-Mamba framework.
 </p>
+
+Based on the proposed method, 3D reconstructions of the patient’s thoracic outline and tumor were generated, as illustrated in Fig. \ref{3dreco}. The images show the segmentation of breast tumors in DCE-MRI and the corresponding 3D reconstructions derived from HV-Mamba results. Subplots (b) and (d) represent the 3D reconstruction models corresponding to 2D MRI slices (a) and (c), respectively, each comprising 80 and 88 sequence images. In each slice, the tumor region is annotated in red.
 
 ### Ablation study
 
