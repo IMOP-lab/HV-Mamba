@@ -19,7 +19,7 @@ The structural overview of the HV-Mamba framework. The left section, designated 
 The experimental environment consisted of two workstations, each equipped with dual NVIDIA RTX 3080 GPUs and 128GB RAM. Experiments were conducted using Python 3.9, PyTorch 2.0.0, and CUDA 11.8. An initial learning rate of 0.0001 was applied across all models to ensure consistency in training dynamics.
 
 ## Experiment
-### Dataset
+### Datasets
 
 Table1: Summary of the breast tumor datasets utilized in this experimental protocol, encompassing total instance counts alongside distributions within the training, validation, and testing cohorts.
 
@@ -107,6 +107,13 @@ Table 4: Comparison of Segmentation Performance Across Breast Cancer Medical Ima
   Figure 2: A comparative analysis of segmentation outputs from HV-Mamba and fifteen contemporary breast cancer segmentation architectures reveals the segmentation efficacy of each model on the BreastDM dataset.
 </p>
 
+<div align=left>
+  <img src="https://github.com/IMOP-lab/HV-Mamba/blob/main/figures/3dreco.png">
+</div>
+<p align=left>
+  Figure 3: Comparative representation of breast tumor delineation on DCE-MRI sequences and associated 3D reconstructions utilizing the HV-Mamba framework. Subfigures (a) and (c) display selected axial MRI slices with delineated tumor boundaries, marked in red. Corresponding 3D reconstructions in subfigures (b) and (d) integrate segmented tumor regions, visualizing spatial morphology and positioning within the thoracic outline, derived from 80 and 88 sequential images, respectively. The resultant models provide an enhanced anatomical perspective.
+</p>
+
 ### Ablation study
 
 #### Effect of Removing Module
@@ -142,6 +149,12 @@ Table 6: This table assesses the integration efficacy of the seSK unit within di
 | SegNet                 | 1.87 ± 0.83           | 74.67 ± 27.52          | 82.10 ± 24.48          | 74.62 ± 27.58         | 75.55 ± 27.10         |
 | + seSK unit            | **1.82 ± 0.80** (↓0.05) | **77.16 ± 25.48** (↑2.49) | **85.39 ± 23.99** (↑3.27) | **77.11 ± 25.53** (↑2.49) | **77.97 ± 24.97** (↑2.42) |
 
+<div align=left>
+  <img src="https://github.com/IMOP-lab/HV-Mamba/blob/main/figures/with and without seSK.png">
+</div>
+<p align=left>
+  Figure 4: Comparative visualization of segmentation outcomes across diverse network architectures on breast DCE-MRI imagery, delineating the influence of the seSK unit. Each model's segmentation precision is evaluated with and without the seSK unit, specifically examining boundary delineation fidelity, noise mitigation, and sensitivity to tumor morphology. Integrating the seSK unit enhances structural coherence and edge detail articulation.
+</p>
 
 ## Question
 
