@@ -1,4 +1,4 @@
-# HV-Mamba: Harmonic Vision Mamba
+# HV-Mamba: Enhanced Breast Carcinoma Tumor Segmentation in Dynamic Contrast-Enhanced MRI via Frequency-Harmonized Vision Mamba
 
 ### [Project page](https://github.com/IMOP-lab/HV-Mamba) | [Our laboratory home page](https://github.com/IMOP-lab) 
 
